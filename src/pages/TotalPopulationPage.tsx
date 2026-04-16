@@ -41,15 +41,15 @@ export default function TotalPopulationPage() {
 
         {/* 关键数据 */}
         <div className="grid grid-cols-3 gap-2 mt-2 shrink-0">
+          <div className="bg-emerald-50/50 rounded-lg p-3 text-center border border-emerald-100">
+            <p className="text-emerald-600 text-xs mb-0.5">1949年</p>
+            <p className="text-emerald-700 text-sm font-medium">5.42亿人</p>
+          </div>
           <div className="bg-blue-50/50 rounded-lg p-3 text-center border border-blue-100">
             <p className="text-blue-600 text-xs mb-0.5">人口峰值</p>
             <p className="text-blue-700 text-sm font-medium">
               {peakPopulation}亿 ({peakYear}年)
             </p>
-          </div>
-          <div className="bg-emerald-50/50 rounded-lg p-3 text-center border border-emerald-100">
-            <p className="text-emerald-600 text-xs mb-0.5">1949年</p>
-            <p className="text-emerald-700 text-sm font-medium">5.42亿人</p>
           </div>
           <div className="bg-orange-50/50 rounded-lg p-3 text-center border border-orange-100">
             <p className="text-orange-600 text-xs mb-0.5">2100年预测</p>
