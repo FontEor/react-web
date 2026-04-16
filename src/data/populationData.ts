@@ -1,10 +1,10 @@
-// 中国历年出生人口和死亡人口数据（单位：万人）
+// 历年出生人口和死亡人口数据（单位：万人）
 // 数据来源：国家统计局及公开数据
 
 export interface PopulationData {
   year: number;
-  birth: number;  // 出生人口（万人）
-  death: number;  // 死亡人口（万人）
+  birth: number; // 出生人口（万人）
+  death: number; // 死亡人口（万人）
 }
 
 // 1949-2026年历史数据
@@ -167,10 +167,10 @@ export const projectedData: PopulationData[] = [
   { year: 2100, birth: 358, death: 1380 },
 ];
 
-// 中国总人口数据（单位：亿人）
+// 总人口数据（单位：亿人）
 export interface TotalPopulationData {
   year: number;
-  population: number;  // 总人口（亿人）
+  population: number; // 总人口（亿人）
 }
 
 // 1949-2026年历史总人口数据
@@ -184,7 +184,7 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 1955, population: 6.15 },
   { year: 1956, population: 6.28 },
   { year: 1957, population: 6.47 },
-  { year: 1958, population: 6.60 },
+  { year: 1958, population: 6.6 },
   { year: 1959, population: 6.72 },
   { year: 1960, population: 6.62 },
   { year: 1961, population: 6.59 },
@@ -196,25 +196,25 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 1967, population: 7.64 },
   { year: 1968, population: 7.85 },
   { year: 1969, population: 8.07 },
-  { year: 1970, population: 8.30 },
+  { year: 1970, population: 8.3 },
   { year: 1971, population: 8.52 },
   { year: 1972, population: 8.72 },
   { year: 1973, population: 8.92 },
   { year: 1974, population: 9.09 },
   { year: 1975, population: 9.24 },
   { year: 1976, population: 9.37 },
-  { year: 1977, population: 9.50 },
+  { year: 1977, population: 9.5 },
   { year: 1978, population: 9.63 },
   { year: 1979, population: 9.75 },
   { year: 1980, population: 9.87 },
   { year: 1981, population: 10.01 },
   { year: 1982, population: 10.17 },
-  { year: 1983, population: 10.30 },
+  { year: 1983, population: 10.3 },
   { year: 1984, population: 10.44 },
   { year: 1985, population: 10.59 },
   { year: 1986, population: 10.75 },
   { year: 1987, population: 10.93 },
-  { year: 1988, population: 11.10 },
+  { year: 1988, population: 11.1 },
   { year: 1989, population: 11.27 },
   { year: 1990, population: 11.43 },
   { year: 1991, population: 11.58 },
@@ -230,7 +230,7 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 2001, population: 12.76 },
   { year: 2002, population: 12.85 },
   { year: 2003, population: 12.92 },
-  { year: 2004, population: 13.00 },
+  { year: 2004, population: 13.0 },
   { year: 2005, population: 13.08 },
   { year: 2006, population: 13.14 },
   { year: 2007, population: 13.21 },
@@ -243,13 +243,13 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 2014, population: 13.68 },
   { year: 2015, population: 13.75 },
   { year: 2016, population: 13.83 },
-  { year: 2017, population: 13.90 },
+  { year: 2017, population: 13.9 },
   { year: 2018, population: 13.95 },
-  { year: 2019, population: 14.00 },
+  { year: 2019, population: 14.0 },
   { year: 2020, population: 14.12 },
   { year: 2021, population: 14.13 },
   { year: 2022, population: 14.12 },
-  { year: 2023, population: 14.10 },
+  { year: 2023, population: 14.1 },
   { year: 2024, population: 14.08 },
   { year: 2025, population: 14.05 },
   { year: 2026, population: 14.02 },
@@ -259,15 +259,15 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
 export const projectedTotalPopulation: TotalPopulationData[] = [
   { year: 2027, population: 13.98 },
   { year: 2028, population: 13.94 },
-  { year: 2029, population: 13.90 },
+  { year: 2029, population: 13.9 },
   { year: 2030, population: 13.85 },
-  { year: 2031, population: 13.80 },
+  { year: 2031, population: 13.8 },
   { year: 2032, population: 13.74 },
   { year: 2033, population: 13.68 },
   { year: 2034, population: 13.62 },
   { year: 2035, population: 13.55 },
   { year: 2036, population: 13.48 },
-  { year: 2037, population: 13.40 },
+  { year: 2037, population: 13.4 },
   { year: 2038, population: 13.32 },
   { year: 2039, population: 13.24 },
   { year: 2040, population: 13.15 },
@@ -279,7 +279,7 @@ export const projectedTotalPopulation: TotalPopulationData[] = [
   { year: 2046, population: 12.55 },
   { year: 2047, population: 12.44 },
   { year: 2048, population: 12.32 },
-  { year: 2049, population: 12.20 },
+  { year: 2049, population: 12.2 },
   { year: 2050, population: 12.08 },
   { year: 2051, population: 11.95 },
   { year: 2052, population: 11.82 },
@@ -288,27 +288,27 @@ export const projectedTotalPopulation: TotalPopulationData[] = [
   { year: 2055, population: 11.42 },
   { year: 2056, population: 11.28 },
   { year: 2057, population: 11.14 },
-  { year: 2058, population: 11.00 },
+  { year: 2058, population: 11.0 },
   { year: 2059, population: 10.86 },
   { year: 2060, population: 10.72 },
   { year: 2061, population: 10.58 },
   { year: 2062, population: 10.44 },
-  { year: 2063, population: 10.30 },
+  { year: 2063, population: 10.3 },
   { year: 2064, population: 10.16 },
   { year: 2065, population: 10.02 },
   { year: 2066, population: 9.88 },
   { year: 2067, population: 9.74 },
-  { year: 2068, population: 9.60 },
+  { year: 2068, population: 9.6 },
   { year: 2069, population: 9.46 },
   { year: 2070, population: 9.32 },
   { year: 2071, population: 9.19 },
   { year: 2072, population: 9.06 },
   { year: 2073, population: 8.93 },
-  { year: 2074, population: 8.80 },
+  { year: 2074, population: 8.8 },
   { year: 2075, population: 8.67 },
   { year: 2076, population: 8.55 },
   { year: 2077, population: 8.42 },
-  { year: 2078, population: 8.30 },
+  { year: 2078, population: 8.3 },
   { year: 2079, population: 8.18 },
   { year: 2080, population: 8.06 },
   { year: 2081, population: 7.94 },
@@ -334,5 +334,11 @@ export const projectedTotalPopulation: TotalPopulationData[] = [
 ];
 
 // 合并历史数据和预测数据（1949-2100）
-export const allPopulationData: PopulationData[] = [...historicalData, ...projectedData];
-export const allTotalPopulation: TotalPopulationData[] = [...historicalTotalPopulation, ...projectedTotalPopulation];
+export const allPopulationData: PopulationData[] = [
+  ...historicalData,
+  ...projectedData,
+];
+export const allTotalPopulation: TotalPopulationData[] = [
+  ...historicalTotalPopulation,
+  ...projectedTotalPopulation,
+];

@@ -9,24 +9,31 @@ export default function ProjectionPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 to-teal-50 p-4 md:p-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
-          中国出生与死亡人口预测对比 (2027-2100)
-        </h1>
-        <LineChart
-          title="中国出生与死亡人口预测对比"
-          data={chartData}
-          seriesNames={["出生人口预测", "死亡人口预测"]}
-          yAxisName="人口（万人）"
-          yAxisMax={2000}
-          colors={["#73c0de", "#fc8452"]}
-          gradientColors={[
-            "rgba(115, 192, 222, 0.3)",
-            "rgba(252, 132, 82, 0.3)",
-          ]}
-          unit="万"
-        />
+    <div className="flex-1 py-4 px-4 flex flex-col min-h-0">
+      <div className="max-w-5xl mx-auto w-full flex-1 flex flex-col min-h-0">
+        {/* 页面标题 */}
+        <div className="text-center mb-3 shrink-0">
+          <h1 className="text-2xl font-medium text-slate-600">
+            出生与死亡人口预测对比 (2027-2100)
+          </h1>
+        </div>
+
+        {/* 图表 */}
+        <div className="flex-1 min-h-0">
+          <LineChart
+            title=""
+            data={chartData}
+            seriesNames={["出生人口预测", "死亡人口预测"]}
+            yAxisName="人口（万人）"
+            yAxisMax={2000}
+            colors={["#22d3ee", "#fb923c"]}
+            gradientColors={[
+              "rgba(34, 211, 238, 0.25)",
+              "rgba(251, 146, 60, 0.25)",
+            ]}
+            unit="万"
+          />
+        </div>
       </div>
     </div>
   );

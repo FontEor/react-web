@@ -9,24 +9,31 @@ export default function HistoricalPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4 md:p-8">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-6">
-          中国历年出生与死亡人口对比 (1949-2026)
-        </h1>
-        <LineChart
-          title="中国历年出生与死亡人口对比"
-          data={chartData}
-          seriesNames={["出生人口", "死亡人口"]}
-          yAxisName="人口（万人）"
-          yAxisMax={3500}
-          colors={["#5470c6", "#ee6666"]}
-          gradientColors={[
-            "rgba(84, 112, 198, 0.3)",
-            "rgba(238, 102, 102, 0.3)",
-          ]}
-          unit="万"
-        />
+    <div className="flex-1 py-4 px-4 flex flex-col min-h-0">
+      <div className="max-w-5xl mx-auto w-full flex-1 flex flex-col min-h-0">
+        {/* 页面标题 */}
+        <div className="text-center mb-3 shrink-0">
+          <h1 className="text-2xl font-medium text-slate-600">
+            历年出生与死亡人口对比 (1949-2026)
+          </h1>
+        </div>
+
+        {/* 图表 */}
+        <div className="flex-1 min-h-0">
+          <LineChart
+            title=""
+            data={chartData}
+            seriesNames={["出生人口", "死亡人口"]}
+            yAxisName="人口（万人）"
+            yAxisMax={3500}
+            colors={["#60a5fa", "#f87171"]}
+            gradientColors={[
+              "rgba(96, 165, 250, 0.25)",
+              "rgba(248, 113, 113, 0.25)",
+            ]}
+            unit="万"
+          />
+        </div>
       </div>
     </div>
   );
