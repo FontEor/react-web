@@ -7,7 +7,7 @@ export interface PopulationData {
   death: number;  // 死亡人口（万人）
 }
 
-// 1949-2024年历史数据
+// 1949-2026年历史数据
 export const historicalData: PopulationData[] = [
   { year: 1949, birth: 1950, death: 1066 },
   { year: 1950, birth: 2020, death: 984 },
@@ -85,12 +85,12 @@ export const historicalData: PopulationData[] = [
   { year: 2022, birth: 956, death: 1041 },
   { year: 2023, birth: 902, death: 1110 },
   { year: 2024, birth: 954, death: 1093 },
-];
-
-// 2025-2100年预测数据（基于联合国世界人口展望中方案）
-export const projectedData: PopulationData[] = [
   { year: 2025, birth: 920, death: 1150 },
   { year: 2026, birth: 895, death: 1175 },
+];
+
+// 2027-2100年预测数据（基于联合国世界人口展望中方案）
+export const projectedData: PopulationData[] = [
   { year: 2027, birth: 870, death: 1200 },
   { year: 2028, birth: 845, death: 1225 },
   { year: 2029, birth: 820, death: 1250 },
@@ -173,7 +173,7 @@ export interface TotalPopulationData {
   population: number;  // 总人口（亿人）
 }
 
-// 1949-2024年历史总人口数据
+// 1949-2026年历史总人口数据
 export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 1949, population: 5.42 },
   { year: 1950, population: 5.52 },
@@ -251,12 +251,12 @@ export const historicalTotalPopulation: TotalPopulationData[] = [
   { year: 2022, population: 14.12 },
   { year: 2023, population: 14.10 },
   { year: 2024, population: 14.08 },
-];
-
-// 2025-2100年预测总人口数据（基于联合国世界人口展望中方案）
-export const projectedTotalPopulation: TotalPopulationData[] = [
   { year: 2025, population: 14.05 },
   { year: 2026, population: 14.02 },
+];
+
+// 2027-2100年预测总人口数据（基于联合国世界人口展望中方案）
+export const projectedTotalPopulation: TotalPopulationData[] = [
   { year: 2027, population: 13.98 },
   { year: 2028, population: 13.94 },
   { year: 2029, population: 13.90 },
