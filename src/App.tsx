@@ -83,7 +83,9 @@ function App() {
         {/* 页脚 */}
         <footer className="bg-slate-600 text-slate-300 py-3.5 shrink-0">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <p className="text-xs">数据来源：国家统计局、联合国世界人口展望</p>
+            <p className="text-xs">
+              部分数据来源：国家统计局、联合国世界人口展望
+            </p>
           </div>
         </footer>
       </div>

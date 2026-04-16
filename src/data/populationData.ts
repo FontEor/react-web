@@ -1,5 +1,5 @@
 // 历年出生人口和死亡人口数据（单位：万人）
-// 数据来源：国家统计局及公开数据
+// 部分数据来源：国家统计局及公开数据
 
 export interface PopulationData {
   year: number;

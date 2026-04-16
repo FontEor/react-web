@@ -14,7 +14,7 @@ export default function ProjectionPage() {
         {/* 页面标题 */}
         <div className="text-center mb-3 shrink-0">
           <h1 className="text-2xl font-medium text-slate-600">
-            出生与死亡人口预测对比 (2027-2100)
+            出生与死亡人口预测 (2027-2100)
           </h1>
         </div>
 
