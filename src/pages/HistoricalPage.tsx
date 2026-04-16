@@ -14,7 +14,7 @@ export default function HistoricalPage() {
         {/* 页面标题 */}
         <div className="text-center mb-3 shrink-0">
           <h1 className="text-2xl font-medium text-slate-600">
-            历年出生与死亡人口 (1949-2026)
+            历年出生与死亡人口 (1949-2025)
           </h1>
         </div>
 
