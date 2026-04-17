@@ -1,5 +1,13 @@
 import ReactECharts from "echarts-for-react";
 import { useEffect, useState, useRef } from "react";
+import type { SeriesOption } from "echarts";
+
+type TooltipParams = {
+  axisValue?: string | number;
+  color?: string;
+  seriesName?: string;
+  value?: number;
+}[];
 
 interface DataPoint {
   year: number;
@@ -40,7 +48,7 @@ export default function LineChart({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const intervalRef = useRef<number | null>(null);
-  const chartRef = useRef<any>(null);
+  const chartRef = useRef<ReactECharts | null>(null);
 
   const showTooltip = (index: number) => {
     const chartInstance = chartRef.current?.getEchartsInstance();
@@ -129,7 +137,7 @@ export default function LineChart({
   const isComplete = currentIndex >= data.length - 1;
   const progressPercent = ((currentIndex + 1) / data.length) * 100;
 
-  const series: any[] = [
+  const series: SeriesOption[] = [
     {
       name: seriesNames[0],
       type: "line",
@@ -228,7 +236,7 @@ export default function LineChart({
         color: "#e2e8f0",
         fontSize: 14,
       },
-      formatter: (params: any[]) => {
+      formatter: (params: TooltipParams) => {
         const year = params[0].axisValue;
         let result = `<div style="font-weight:500;margin-bottom:6px;font-size:15px;">${year}年</div>`;
         params.forEach((param) => {
@@ -330,7 +338,7 @@ export default function LineChart({
               {unit}
             </span>
           </span>
-          {currentValue2 !== undefined && seriesNames[1] && (
+          {currentValue2 !== undefined && seriesNames[1] && colors[1] && (
             <span className="text-sm" style={{ color: colors[1] }}>
               {seriesNames[1]}:{" "}
               <span className="font-medium">
