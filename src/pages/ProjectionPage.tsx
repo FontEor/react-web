@@ -31,6 +31,7 @@ export default function ProjectionPage() {
               "rgba(34, 211, 238, 0.25)",
               "rgba(251, 146, 60, 0.25)",
             ]}
+            animationSpeed={700}
             unit="万"
           />
         </div>

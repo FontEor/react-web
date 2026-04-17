@@ -31,6 +31,7 @@ export default function HistoricalPage() {
               "rgba(96, 165, 250, 0.25)",
               "rgba(248, 113, 113, 0.25)",
             ]}
+            animationSpeed={700}
             unit="万"
           />
         </div>

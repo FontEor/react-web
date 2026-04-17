@@ -34,7 +34,7 @@ export default function TotalPopulationPage() {
             yAxisMax={15}
             colors={["#818cf8"]}
             gradientColors={["rgba(129, 140, 248, 0.25)"]}
-            animationSpeed={150}
+            animationSpeed={700}
             unit="亿"
           />
         </div>

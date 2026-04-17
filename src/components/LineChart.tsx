@@ -28,7 +28,7 @@ export default function LineChart({
   yAxisMax,
   colors,
   gradientColors,
-  animationSpeed = 300,
+  animationSpeed = 500,
   showEndLabels = true,
   unit = "",
 }: LineChartProps) {
@@ -222,17 +222,17 @@ export default function LineChart({
       backgroundColor: "rgba(51, 65, 85, 0.9)",
       borderColor: "#64748b",
       borderWidth: 1,
-      padding: [8, 12],
+      padding: [12, 16],
       borderRadius: 6,
       textStyle: {
         color: "#e2e8f0",
-        fontSize: 12,
+        fontSize: 14,
       },
       formatter: (params: any[]) => {
         const year = params[0].axisValue;
-        let result = `<div style="font-weight:500;margin-bottom:4px;">${year}年</div>`;
+        let result = `<div style="font-weight:500;margin-bottom:6px;font-size:15px;">${year}年</div>`;
         params.forEach((param) => {
-          result += `<div style="margin:2px 0;"><span style="color:${param.color}">●</span> ${param.seriesName}: ${param.value}${unit}</div>`;
+          result += `<div style="margin:4px 0;font-size:14px;"><span style="color:${param.color}">●</span> ${param.seriesName}: ${param.value}${unit}</div>`;
         });
         return result;
       },
@@ -310,7 +310,7 @@ export default function LineChart({
         <ReactECharts
           ref={chartRef}
           option={option}
-          style={{ height: "100%", width: "100%", minHeight: "480px" }}
+          style={{ height: "100%", width: "100%", minHeight: "510px" }}
           opts={{ renderer: "svg" }}
         />
       </div>
@@ -319,14 +319,24 @@ export default function LineChart({
       <div className="bg-slate-50/50 px-4 py-2.5 border-t border-slate-100 flex items-center justify-between gap-4">
         {/* 数据展示 */}
         <div className="flex items-center gap-3 bg-slate-100 px-3 py-1.5 rounded-lg">
-          <span className="text-slate-600 text-sm font-medium">{currentYear}年</span>
+          <span className="text-slate-600 text-sm font-medium">
+            {currentYear}年
+          </span>
           <span className="text-slate-300">|</span>
           <span className="text-sm" style={{ color: colors[0] }}>
-            {seriesNames[0]}: <span className="font-medium">{currentValue1}{unit}</span>
+            {seriesNames[0]}:{" "}
+            <span className="font-medium">
+              {currentValue1}
+              {unit}
+            </span>
           </span>
           {currentValue2 !== undefined && seriesNames[1] && (
             <span className="text-sm" style={{ color: colors[1] }}>
-              {seriesNames[1]}: <span className="font-medium">{currentValue2}{unit}</span>
+              {seriesNames[1]}:{" "}
+              <span className="font-medium">
+                {currentValue2}
+                {unit}
+              </span>
             </span>
           )}
         </div>
@@ -338,11 +348,15 @@ export default function LineChart({
               className="h-full rounded-full transition-all duration-100"
               style={{
                 width: `${progressPercent}%`,
-                background: colors[1] ? `linear-gradient(to right, ${colors[0]}, ${colors[1]})` : colors[0],
+                background: colors[1]
+                  ? `linear-gradient(to right, ${colors[0]}, ${colors[1]})`
+                  : colors[0],
               }}
             ></div>
           </div>
-          <span className="text-xs text-slate-400 w-12 text-right">{currentIndex + 1}/{data.length}</span>
+          <span className="text-xs text-slate-400 w-12 text-right">
+            {currentIndex + 1}/{data.length}
+          </span>
         </div>
 
         {/* 控制按钮 */}
