@@ -78,7 +78,6 @@ export default function LineChart({
       }
       return;
     }
-
     intervalRef.current = window.setInterval(() => {
       if (currentIndex < data.length - 1) {
         const newIndex = currentIndex + 1;
@@ -94,7 +93,6 @@ export default function LineChart({
         setTimeout(() => showTooltip(newIndex), 50);
       }
     }, animationSpeed);
-
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -133,10 +131,8 @@ export default function LineChart({
     displayData.values2.length > 0
       ? displayData.values2[displayData.values2.length - 1]
       : undefined;
-
   const isComplete = currentIndex >= data.length - 1;
   const progressPercent = ((currentIndex + 1) / data.length) * 100;
-
   const series: SeriesOption[] = [
     {
       name: seriesNames[0],
